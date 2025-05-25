@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>English Care</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Montserrat:wght@200;400;600&display=swap" rel="stylesheet"> 
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+
+          <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #ffffff; /* Changed background to white */
+            color: #333; /* Changed text color to dark for readability */
+        }
+        .quiz-container {
+            background: #f5f5f5; /* Changed background to light gray */
+            padding: 2.5rem 3rem;
+            border-radius: 15px;
+            width: 450px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            text-align: center;
+            margin: 20px auto;
+            color: #222; /* darker text for quiz */
+        }
+        .question {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            font-weight: 600;
+            min-height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #111;
+        }
+        .answers {
+            display: flex;
+            justify-content: space-around;
+            gap: 1rem;
+        }
+        button.answer-btn {
+            background: #e0e0e0;
+            border: none;
+            border-radius: 10px;
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #333;
+            cursor: pointer;
+            flex: 1;
+            transition: background-color 0.3s ease;
+            user-select: none;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+        }
+        button.answer-btn:hover:not(:disabled) {
+            background: #d0d0d0;
+        }
+        button.correct {
+            background-color: #28a745 !important; /* green */
+            color: white;
+            cursor: default;
+        }
+        button.incorrect {
+            background-color: #dc3545 !important; /* red */
+            color: white;
+            cursor: default;
+        }
+        .footer {
+            margin-top: 1.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #222;
+            height: 1.5rem;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            color: #222;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #e8e8e8;
+        }
+        /* Reset link and general text color for content */
+        h1, h2, h3, p, ul, li, table {
+            color: #222;
+        }
+    </style>
+
+    </head>
+
+    <body>
+
+        <!-- Spinner Start -->
+        <div id="spinner" class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50  d-flex align-items-center justify-content-center">
+            <div class="spinner-grow text-primary" role="status"></div>
+        </div>
+        <!-- Spinner End -->
+
+
+ <!-- Navbar start -->
+<div class="container px-0">
+    <nav class="navbar navbar-light navbar-expand-xl py-2">
+        <a href="index.html" class="navbar-brand">
+            <h1 class="text-primary display-6">English<span class="text-secondary">Care</span></h1>
+        </a>
+        <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="fa fa-bars text-primary"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-lg-3"> 
+                <a href="index.html" class="nav-item nav-link active">Home</a>
+                <a href="quiz.html" class="nav-item nav-link">Quiz</a>
+                <a href="contact.html" class="nav-item nav-link">Profil</a>
+                 <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                                <div class="dropdown-menu m-0 bg-secondary rounded-0">
+                                    <a href="simplepresenttense.html" class="dropdown-item">Simple Present Tense</a>
+                                    <a href="presentcontinous.html" class="dropdown-item">Present Continuous Tense</a>
+                                    <a href="presentperfect.html" class="dropdown-item">Present Perfect Tense</a>
+                                    <a href="presentperfectcontinous.html" class="dropdown-item">Present Perfect Continuous Tense</a>
+                                    <a href="simplepast.html" class="dropdown-item">Simple Past Tense</a>
+                                    <a href="pastcontinous.html" class="dropdown-item">Past Continuous Tense</a>
+                                    <a href="pastperfect.html" class="dropdown-item">Past Perfect Tense</a>
+                                    <a href="pastperfectcontinous.html" class="dropdown-item">Past Perfect Continuous Tense</a>
+                                    <a href="simpleFuturetense.html" class="dropdown-item">Simple Future Tense</a>
+                                    <a href="Futurecontinous.html" class="dropdown-item">Future Continuous Tense</a>
+                                    <a href="Futureperfect.html" class="dropdown-item">Future Perfect Tense</a>
+                                    <a href="Futureperfectcontinous.html" class="dropdown-item">Future Perfect Continuous Tense</a>
+
+                                </div>
+                            </div>
+            </div>
+        </div>
+    </nav>
+</div>
+<!-- Navbar End -->
+
+        <!-- Page Header Start -->
+        <div class="container-fluid page-header py-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container text-center py-5">
+                <h1 class="display-2 text-white mb-4">Future Perfect Tense</h1>
+            </div>
+        </div>
+        <!-- Page Header End -->
+            
+
+        <!-- Teori -->
+        <div class="container-fluid service py-2">
+            <div class="container py-2">
+            <!-- Introduction -->
+                <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 700px;">
+                    <h4 class="text-primary mb-2 border-bottom border-primary border-2 d-inline-block p-2 title-border-radius">Introduction</h4>
+                </div>
+               <p><b>The Future Perfect Tense is used to describe:</b></p>
+                <ul>
+                    <li>Actions that will be completed before a specific future time.</li>
+                    <li>Events that will finish before another future action happens.</li>
+                </ul>
+
+                 <!-- Defintion -->
+                <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 700px;">
+                    <h4 class="text-primary mb-3 border-bottom border-primary border-2 d-inline-block p-2 title-border-radius">Definition</h4>
+                </div>
+               <p><b >This tense emphasizes completion before a future deadline or another future event.</p>
+                <!-- Tabel Rumus -->
+                <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 700px;">
+                    <h4 class="text-primary mb-2 border-bottom border-primary border-2 d-inline-block p-2 title-border-radius">Formulas</h4>
+                </div>
+                <table style="width: 80%; border-collapse: collapse; margin: 20px auto; background-color: #fff; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+                    <tr>
+                        <th style="border: 1px solid #ddd; padding: 12px; text-align: left; background-color: #f2f2f2;">Sentence Type</th>
+                        <th style="border: 1px solid #ddd; padding: 12px; text-align: left; background-color: #f2f2f2;">Formula</th>
+                        <th style="border: 1px solid #ddd; padding: 12px; text-align: left; background-color: #f2f2f2;">Examples</th>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid #ddd; padding: 12px; text-align: left;">(+) Positive</td>
+                        <td style="border: 1px solid #ddd; padding: 12px; text-align: left;">Subject + will + have + V3 (Past Participle)</td>
+                        <td style="border: 1px solid #ddd; padding: 12px; text-align: left;">
+                            <ul style="margin: 0; padding: 0; list-style-type: none;">
+                                <li>She will have finished her project by Friday.</li>
+                                <li>They will have left before we arrive.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid #ddd; padding: 12px; text-align: left;">(-) Negative</td>
+                        <td style="border: 1px solid #ddd; padding: 12px; text-align: left;">Subject + will + NOT + have + V3</td>
+                        <td style="border: 1px solid #ddd; padding: 12px; text-align: left;">
+                            <ul style="margin: 0; padding: 0; list-style-type: none;">
+                                <li>He will not (won't) have completed the work by 5 PM.</li>
+                                <li> We will not (won't) have eaten before the show.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid #ddd; padding: 12px; text-align: left;">(?) Question</td>
+                        <td style="border: 1px solid #ddd; padding: 12px; text-align: left;">Will + Subject + have + V3?</td>
+                        <td style="border: 1px solid #ddd; padding: 12px; text-align: left;">
+                            <ul style="margin: 0; padding: 0; list-style-type: none;">
+                                <li>Will you have arrived by 8 PM?</li>
+                                <li> Will she have graduated by next June?</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+                <!-- Note -->
+                <h3>Notes:</h3>
+                <ul>
+                    <li>"Will have" is used for all subjects (I/you/he/they etc.).</li>
+                    <li>Time Signal Words:by 2025, by next month, by tomorrow</li>
+
+                </ul>
+                <!-- Tabel Contoh -->
+                <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 700px;">
+                    <h4 class="text-primary mb-3 border-bottom border-primary border-2 d-inline-block p-2 title-border-radius">Example Sentences</h4>
+                </div>
+                <table style="width: 80%; border-collapse: collapse; margin: 20px auto; background-color: #fff; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+                    <tr>
+                        <th style="border: 1px solid #ddd; padding: 12px; text-align: left; background-color: #f2f2f2;">Usage</th>
+                        <th style="border: 1px solid #ddd; padding: 12px; text-align: left; background-color: #f2f2f2;">Examples</th>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid #ddd; padding: 12px; text-align: left;">Completed Before Future Time</td>
+                        <td style="border: 1px solid #ddd; padding: 12px; text-align: left;">
+                            <ul style="margin: 0; padding: 0; list-style-type: none;">
+                                <li> By next year, I will have saved enough for a house.</li>
+                                <li>They will have repaired the road by winter.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid #ddd; padding: 12px; text-align: left;">Finished Before Another Action</td>
+                        <td style="border: 1px solid #ddd; padding: 12px; text-align: left;">
+                            <ul style="margin: 0; padding: 0; list-style-type: none;">
+                                <li>She will have cooked dinner before we get home.</li>
+                                <li>The train will have departed when we reach the station.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    
+                </table>         
+                <!-- Exercise -->
+                <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 700px;">
+                    <h4 class="text-primary mb-3 border-bottom border-primary border-2 d-inline-block p-2 title-border-radius">Exercise</h4>
+             </div>
+             
+<div class="quiz-container" role="main" aria-live="polite">
+    <div class="question" id="question">Loading question...</div>
+    <div class="answers">
+        <button class="answer-btn" id="answerA" data-choice="a">A</button>
+        <button class="answer-btn" id="answerB" data-choice="b">B</button>
+    </div>
+    <div class="footer" id="footer"></div>
+</div>
+
+<script>
+    const quizQuestions = [
+        { question: "By 2030, scientists ________ discovered a cure.", a: "will have", b: "will has", correct: "a" },
+        { question: "She will have ______ before the new policy starts.", a: "retiring", b: "retired", correct: "b" },
+        { question: " By 2025, I _____ (complete) my PhD", a: "will have compliting", b: "will have completed", correct: "b" },
+        { question: " She _____ (not/finish) the report before the meeting.", a: "will not finished",b: "will not have finished", correct: "b" },
+        { question: "____ you ___ (read) all the material by tomorrow?", a: "Will, have reading", b: "Will, have read", correct: "b" }
+    ];
+
+    const questionEl = document.getElementById('question');
+    const answerABtn = document.getElementById('answerA');
+    const answerBBtn = document.getElementById('answerB');
+    const footerEl = document.getElementById('footer');
+
+    let currentQuestionIndex = 0;
+    let answered = false;
+
+    function loadQuestion(index) {
+        answered = false;
+        const q = quizQuestions[index];
+        questionEl.textContent = q.question;
+        answerABtn.textContent = "A. " + q.a;
+        answerBBtn.textContent = "B. " + q.b;
+        answerABtn.className = "answer-btn";
+        answerBBtn.className = "answer-btn";
+        answerABtn.disabled = false;
+        answerBBtn.disabled = false;
+        footerEl.textContent = "Click your answer";
+    }
+
+    function handleAnswerClick(e) {
+        if (answered) return;
+        answered = true;
+
+        const choice = e.target.getAttribute('data-choice');
+        const correctChoice = quizQuestions[currentQuestionIndex].correct;
+
+        if (choice === correctChoice) {
+            e.target.classList.add('correct');
+            footerEl.textContent = "Correct answer! 🎉";
+        } else {
+            e.target.classList.add('incorrect');
+            footerEl.textContent = "Wrong answer!";
+            // highlight correct answer green
+            if (correctChoice === 'a') {
+                answerABtn.classList.add('correct');
+            } else {
+                answerBBtn.classList.add('correct');
+            }
+        }
+
+        answerABtn.disabled = true;
+        answerBBtn.disabled = true;
+
+        setTimeout(() => {
+            currentQuestionIndex = (currentQuestionIndex + 1) % quizQuestions.length;
+            loadQuestion(currentQuestionIndex);
+        }, 1800);
+    }
+
+    answerABtn.addEventListener('click', handleAnswerClick);
+    answerBBtn.addEventListener('click', handleAnswerClick);
+
+    loadQuestion(currentQuestionIndex);
+</script>
+
+        </div>
+        <!-- Teori End -->
+        
+         
+
+
+   <!-- Copyright Start -->
+        <div class="container-fluid copyright bg-dark py-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        <span class="text-light"><a href="#"><i class="fas fa-copyright text-light me-2"></i>Tatia Wardah Nst Polmed </a>, All right reserved 2025.</span>
+                    </div>
+                    <div class="col-md-6 my-auto text-center text-md-end text-white">
+                        Politeknik Negeri Medan <a class="border-bottom" href="#">TRPL</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-primary border-3 border-primary rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>   
+
+        
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    </body>
+
+</html>
